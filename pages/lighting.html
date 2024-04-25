@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenix Lighting</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        body {
+
+            background-image: url("../images/blackTexture.png");
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 4 equal columns */
+            grid-gap: 10px;
+            /* Gap between grid items */
+        }
+
+    </style>
+    <script src="../lighting.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li><a href="./photo.html">Photo</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="./character.html">Character</a></li>
+        </ul>
+    </nav>
+    <h1>Lighting</h1>
+
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="../images/lightingAlien1.jpg" alt="Photo 1"
+                onclick="openSlideshow('../images/lightingAlien1.jpg', 'A stylized approach to lighting. The intent is to use light to help build the intensity of the scene. Made using Autodesk Maya, Arnold render, and free to use assets from the internet.')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingAlien2.jpg" alt="Photo 2"
+                onclick="openSlideshow('../images/lightingAlien2.jpg', 'A blue spotlight is being used as a key light. The aiAtmosphereVolume effect is turned on in the render settings to aid the visual style of the abduction beam.Point lights with a warm color temperature are being used to light the church stairs.')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingAlien3.jpg" alt="Photo 3"
+                onclick="openSlideshow('../images/lightingAlien3.jpg', 'Green and Blue area lights are being used as fill/bounce lights to help illuminate the surrounding assets such as the trees and church. The area lights have the volume set to 0 so they will not be affected by the aiAtmosphereVolume effect.')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingAlien20.jpg" alt="Photo 4"
+                onclick="openSlideshow('../images/lightingAlien20.jpg', 'Layout 1')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingAlien10.jpg" alt="Photo 5"
+                onclick="openSlideshow('../images/lightingAlien10.jpg', 'Layout 2')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingAlien30.jpg" alt="Photo 6"
+                onclick="openSlideshow('../images/lightingAlien30.jpg', 'Light Editor')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingWheel1.jpg" alt="Photo 7"
+                onclick="openSlideshow('../images/lightingWheel1.jpg', 'A somber mood. No practical lights are used. The intent is to light the room as if only natural light were coming in from the windows in an otherwise dark room. Made using Autodesk Maya, Arnold render, and free to use assets from the internet.')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingWheel2.jpg" alt="Photo 8"
+                onclick="openSlideshow('../images/lightingWheel2.jpg', 'Window glass has no material to allow the directional light to pierce the room  creating long shadows.')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingWheel3.jpg" alt="Seagull in Santa Monica, CA. (2018)"
+                onclick="openSlideshow('../images/lightingWheel3.jpg', 'The plane outside of the windows has a Maya surface shader material applied with an image set as the color to create luminance.')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingWheel10.jpg" alt="Photo 10"
+                onclick="openSlideshow('../images/lightingWheel10.jpg', 'Layout')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/lightingWheel20.png" alt="Photo 11"
+                onclick="openSlideshow('../images/lightingWheel20.png', 'Light Editor')">
+        </div>
+
+
+    </div>
+
+    <div id="slideshowModal" class="modal">
+        <span class="close" onclick="closeSlideshow()">&times;</span>
+        <div class="slideshow-content">
+            <img id="slideshowImg" src="" alt="">
+            <div id="caption"></div>
+            <button class="prev" onclick="previousSlide()">&larr; Previous</button>
+            <button class="next" onclick="nextSlide()">Next &rarr;</button>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li><a href="./photo.html">Photo</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="./character.html">Character</a></li>
+        </ul>
+    </nav>
+
+
+    <footer>
+        <p>&copy; 2024 Fenix Lighting</p>
+
+</body>
+</html>

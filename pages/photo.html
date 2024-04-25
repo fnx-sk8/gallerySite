@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenix Photo</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        body {
+
+            background-image: url("../images/blackTexture.png");
+
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 equal columns */
+            grid-gap: 10px;
+            /* Gap between grid items */
+        }
+    </style>
+
+    <script src="../gallery.js"></script>
+</head>
+
+
+<body>
+
+    <nav>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li><a href="#">Photo</a></li>
+            <li><a href="./lighting.html">Lighting</a></li>
+            <li><a href="./character.html">Character</a></li>
+        </ul>
+    </nav>
+
+
+    <h1>Photography</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="../images/photoArmy.jpg" alt="Photo 1"
+                onclick="openSlideshow('../images/photoArmy.jpg', 'Protestor and U.S Army soldier in Dowtown Los Angeles, CA. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoStaples.jpg" alt="Photo 2"
+                onclick="openSlideshow('../images/photoStaples.jpg', 'Protestors outside Staples Center. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoSquad.jpg" alt="Photo 3"
+                onclick="openSlideshow('../images/photoSquad.jpg', 'Los Angeles County Sheriff takes photo of his own, South Central Los Angeles, CA. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoTree.jpg" alt="Photo 4"
+                onclick="openSlideshow('../images/photoTree.jpg', 'Federal and local authorities guard a courthouse in Downtown Los Angeles, CA. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoChief.jpg" alt="Photo 5"
+                onclick="openSlideshow('../images/photoChief.jpg', 'LAPD Chief of Police Michel Moore answers tough questions outside police HQ. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoFlashlight.jpg" alt="Photo 6"
+                onclick="openSlideshow('../images/photoFlashlight.jpg', 'Los Angeles County Sheriff points flashlight. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoMotoCop.jpg" alt="Photo 7"
+                onclick="openSlideshow('../images/photoMotoCop.jpg', 'Parade of LAPD motorcycle police officers. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoCrowd.jpg" alt="Photo 8"
+                onclick="openSlideshow('../images/photoCrowd.jpg', 'Protestors overflow the streets of Downtown Los Angeles, CA. (2020)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoBird.jpg" alt="Seagull in Santa Monica, CA. (2018)"
+                onclick="openSlideshow('../images/photoBird.jpg', 'Seagull in Santa Monica, CA. (2018)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoCreep.jpg" alt="Photo 10"
+                onclick="openSlideshow('../images/photoCreep.jpg', 'Lady drops letter off in mailbox at Union Station, Los Angeles, CA. (2018)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoTent.jpg" alt="Photo 11"
+                onclick="openSlideshow('../images/photoTent.jpg', 'Camper escapes city life by pitching tent near city, Pasadena, CA. (2018)')">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/photoLines.jpg" alt="Photo 12"
+                onclick="openSlideshow('../images/photoLines.jpg', 'Utility interfaces against a blue concrete wall. (2018)')">
+        </div>
+
+        <!-- Add more gallery items here if needed -->
+    </div>
+
+
+    <div id="slideshowModal" class="modal">
+        <span class="close" onclick="closeSlideshow()">&times;</span>
+        <div class="slideshow-content">
+            <img id="slideshowImg" src="" alt="">
+            <div id="caption"></div>
+            <button class="prev" onclick="previousSlide()">&larr; Previous</button>
+            <button class="next" onclick="nextSlide()">Next &rarr;</button>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li><a href="#">Photo</a></li>
+            <li><a href="./lighting.html">Lighting</a></li>
+            <li><a href="./character.html">Character</a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2024 Fenix Photography</p>
+
+</body>
+
+</html>

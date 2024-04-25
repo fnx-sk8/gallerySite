@@ -1,0 +1,179 @@
+nav {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(213, 100, 122);
+    font-family: monospace;
+    font-weight: bolder;
+
+}
+
+h2 {
+    text-align: center;
+    color: rgb(213, 100, 122);
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1em;
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: #121113;
+}
+
+nav ul li a:hover {
+    color: rgb(213, 100, 122);
+}
+
+nav ul li a:active {
+    color: #27ce45;
+}
+
+.video {
+    background-size: cover;
+    width: 97%;
+    height: 10%;
+    margin: 0 auto;
+    display: block
+}
+
+
+.gallery-item {
+    overflow: hidden;
+    /* Hide overflowing content */
+
+
+
+}
+
+.gallery-item img {
+    width: 100%;
+    /* Ensure images fill their container */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    /* Add transition for smooth effect */
+}
+
+.gallery-item video {
+
+    width: 100%;
+
+    height: auto;
+
+    transition: transform 0.3s ease;
+
+
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover */
+}
+
+.gallery-item:hover video {
+    transform: scale(1.1);
+   
+}
+
+/* Styles for modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 97%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparent black background */
+    overflow: auto;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.slideshow-content {
+    text-align: center;
+}
+
+.slideshow-content img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+#caption {
+    position: absolute;
+    bottom: relative;
+    /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    /* Adjust the font size */
+    text-align: bottom;
+    padding: 10px;
+    /* Add padding to the caption */
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+footer {
+    background-color: #333;
+    color: rgb(213, 100, 122);
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bolder;
+}

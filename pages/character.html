@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenix Character Design</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        body {
+
+            background-image: url("../images/blackTexture.png");
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 4 equal columns */
+            grid-gap: 3px;
+            /* Gap between grid items */
+        }
+
+        .gallery-item {
+            display: flex;
+            justify-content: center;
+            /* Center horizontally */
+            align-items: center;
+            /* Center vertically */
+            height: 100vh;
+            /* Set the height of the container to the viewport height */
+        }
+
+        .gallery-item video {
+            max-width: 100%;
+            max-height: 100%;
+            border: 5px solid gray; 
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li><a href="./photo.html">Photo</a></li>
+            <li><a href="./lighting.html">Lighting</a></li>
+            <li><a href="#">Character</a></li>
+        </ul>
+    </nav>
+    <h1>Character Design</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="../images/characterBruno.png" alt="Photo 1">
+        </div>
+
+        <div class="gallery-item">
+            <video src="../videos/bruno_1.mp4" autoplay loop muted alt="Video 2">
+        </div>
+
+        <div class="gallery-item">
+            <video src="../videos/winkle.mp4" autoplay loop muted alt="Video 2">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/characterWinkle.png" alt="Photo 4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="../images/chracterOctavio.png" alt="Photo 5">
+        </div>
+
+        <div class="gallery-item">
+            <video src="../videos/octo.mp4" autoplay loop muted alt="Video 2">
+        </div>
+
+    </div>
+
+
+    <nav>
+        <ul>
+            <li> <a href="../index.html">Home</a></li>
+            <li><a href="./photo.html">Photo</a></li>
+            <li><a href="./lighting.html">Lighting</a></li>
+            <li><a href="#">Character</a></li>
+        </ul>
+    </nav>
+    <footer>
+        <p>&copy; 2024 Fenix Character Design</p>
+</body>
+
+</html>
