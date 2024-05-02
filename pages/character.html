@@ -27,7 +27,7 @@
             /* Center horizontally */
             align-items: center;
             /* Center vertically */
-            height: 100vh;
+            height: 30vh;
             /* Set the height of the container to the viewport height */
         }
 
@@ -37,6 +37,19 @@
             border: 5px solid gray; 
             box-sizing: border-box;
         }
+
+        @media only screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+        
+        width: 100%; /* Adjust gallery item width for mobile */
+    }
+    .modal{
+        top: 250px;
+    }
+}
+
+        
     </style>
 
 </head>

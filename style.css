@@ -48,7 +48,7 @@ nav ul li a:active {
 
 .video {
     background-size: cover;
-    width: 97%;
+    width: 50%;
     height: 10%;
     margin: 0 auto;
     display: block
@@ -130,6 +130,7 @@ nav ul li a:active {
 .slideshow-content img {
     max-width: 90%;
     max-height: 80%;
+    margin: 0 auto;
 }
 
 .prev,
@@ -177,3 +178,13 @@ footer {
     padding: 20px 0;
     font-weight: bolder;
 }
+
+
+
+
+    .gallery-item img,
+    .gallery-item video {
+        width: 100%; /* Ensure images and videos fill their containers */
+        height: auto; /* Maintain aspect ratio */
+    }
+

@@ -62,3 +62,15 @@ function nextSlide() {
     document.getElementById('caption').innerHTML = captions[currentSlideIndex];
 }
 
+
+
+window.addEventListener('load', function() {
+    // Get the video element
+    var video = document.querySelector('.video');
+
+    // Calculate the left margin to center the video horizontally
+    var marginLeft = (window.innerWidth - video.offsetWidth) / 2;
+
+    // Set the left margin to center the video
+    video.style.marginLeft = marginLeft + 'px';
+});
