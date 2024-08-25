@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,45 @@
     <link rel="stylesheet" href="../style.css">
 
     <style>
-
         body {
-
             background-image: url("../images/blackTexture.png");
         }
 
         .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            /* 4 equal columns */
             grid-gap: 10px;
-            /* Gap between grid items */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .gallery-item.center-photo10 img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery-item.last-img img {
+            width: 100%;
+            height: auto;
         }
 
         @media only screen and (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(1, 1fr);
-        
-        width: 100%; /* Adjust gallery item width for mobile */
-    }
-    .modal{
-        top: 250px;
-    }
-}
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+                width: 100%;
+            }
 
+            .gallery-item.center-photo10 {
+                grid-column: auto; /* Full width on mobile */
+            }
+        }
     </style>
     <script src="../lighting.js"></script>
 </head>
+
 <body>
     <nav>
         <ul>
@@ -45,7 +57,6 @@
         </ul>
     </nav>
     <h1>Lighting</h1>
-
 
     <div class="gallery">
         <div class="gallery-item">
@@ -85,7 +96,7 @@
 
         <div class="gallery-item">
             <img src="../images/lightingWheel2.jpg" alt="Photo 8"
-                onclick="openSlideshow('../images/lightingWheel2.jpg', 'Window glass has no material to allow the directional light to pierce the room  creating long shadows.')">
+                onclick="openSlideshow('../images/lightingWheel2.jpg', 'Window glass has no material to allow the directional light to pierce the room creating long shadows.')">
         </div>
 
         <div class="gallery-item">
@@ -93,17 +104,10 @@
                 onclick="openSlideshow('../images/lightingWheel3.jpg', 'The plane outside of the windows has a Maya surface shader material applied with an image set as the color to create luminance.')">
         </div>
 
-        <div class="gallery-item">
+        <div class="gallery-item last-img">
             <img src="../images/lightingWheel10.jpg" alt="Photo 10"
                 onclick="openSlideshow('../images/lightingWheel10.jpg', 'Layout')">
         </div>
-
-        <div class="gallery-item">
-            <img src="../images/lightingWheel20.png" alt="Photo 11"
-                onclick="openSlideshow('../images/lightingWheel20.png', 'Light Editor')">
-        </div>
-
-
     </div>
 
     <div id="slideshowModal" class="modal">
@@ -125,9 +129,9 @@
         </ul>
     </nav>
 
-
     <footer>
         <p>&copy; 2024 Fenix Lighting</p>
-
+    </footer>
 </body>
+
 </html>

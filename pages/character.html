@@ -9,100 +9,112 @@
 
     <style>
         body {
-
             background-image: url("../images/blackTexture.png");
+
+        }
+
+        .gallery-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
         }
 
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            /* 4 equal columns */
-            grid-gap: 3px;
-            /* Gap between grid items */
+            grid-gap: 15px;
+            max-width: 1200px;
+            /* Restrict the gallery width */
+            margin: 0 auto;
+            /* Center the gallery */
         }
 
         .gallery-item {
+            position: relative;
             display: flex;
             justify-content: center;
-            /* Center horizontally */
             align-items: center;
-            /* Center vertically */
-            height: 30vh;
-            /* Set the height of the container to the viewport height */
+            height: 60vh;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            /* Consistent aspect ratio for both images and videos */
         }
 
+        .gallery-item img,
         .gallery-item video {
-            max-width: 100%;
-            max-height: 100%;
-            border: 5px solid gray; 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Crop the video and image to fill the container */
+            border: 5px solid gray;
             box-sizing: border-box;
         }
 
         @media only screen and (max-width: 600px) {
-    .gallery {
-        grid-template-columns: repeat(1, 1fr);
-        
-        width: 100%; /* Adjust gallery item width for mobile */
-    }
-    .modal{
-        top: 250px;
-    }
-}
+            .gallery {
+                grid-template-columns: 1fr;
+            }
 
-        
+            .gallery-item {
+                height: 65vh;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
-
 </head>
 
 <body>
     <nav>
         <ul>
-            <li> <a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="./photo.html">Photo</a></li>
             <li><a href="./lighting.html">Lighting</a></li>
             <li><a href="#">Character</a></li>
         </ul>
     </nav>
+
     <h1>Character Design</h1>
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="../images/characterBruno.png" alt="Photo 1">
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/characterBruno.png" alt="Character Bruno">
+            </div>
+            <div class="gallery-item">
+                <video src="../videos/bruno_1.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <video src="../videos/winkle.mp4" autoplay loop muted></video>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/characterWinkle.png" alt="Character Winkle">
+            </div>
+            <div class="gallery-item">
+                <img src="../images/chracterOctavio.png" alt="Character Octavio">
+            </div>
+            <div class="gallery-item">
+                <video src="../videos/octo.mp4" autoplay loop muted></video>
+            </div>
         </div>
-
-        <div class="gallery-item">
-            <video src="../videos/bruno_1.mp4" autoplay loop muted alt="Video 2">
-        </div>
-
-        <div class="gallery-item">
-            <video src="../videos/winkle.mp4" autoplay loop muted alt="Video 2">
-        </div>
-
-        <div class="gallery-item">
-            <img src="../images/characterWinkle.png" alt="Photo 4">
-        </div>
-
-        <div class="gallery-item">
-            <img src="../images/chracterOctavio.png" alt="Photo 5">
-        </div>
-
-        <div class="gallery-item">
-            <video src="../videos/octo.mp4" autoplay loop muted alt="Video 2">
-        </div>
-
     </div>
-
 
     <nav>
         <ul>
-            <li> <a href="../index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="./photo.html">Photo</a></li>
             <li><a href="./lighting.html">Lighting</a></li>
             <li><a href="#">Character</a></li>
         </ul>
     </nav>
+
     <footer>
         <p>&copy; 2024 Fenix Character Design</p>
+    </footer>
 </body>
 
 </html>
