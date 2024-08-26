@@ -23,14 +23,9 @@
             height: auto; /* Maintain aspect ratio */
         }
 
-        .gallery-item.center-photo10 img {
-            width: 100%;
-            height: auto;
-        }
-
-        .gallery-item.last-img img {
-            width: 100%;
-            height: auto;
+        /* Center the last image in the row */
+        .gallery-item.last-img {
+            grid-column: 2 / span 1; /* Start at the 2nd column and span 1 column */
         }
 
         @media only screen and (max-width: 600px) {
